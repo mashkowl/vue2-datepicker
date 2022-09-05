@@ -80,7 +80,7 @@ export default {
       const months = monthsLocale.map((text, month) => {
         return { text, month };
       });
-      return chunk(months, 3);
+      return chunk(months, 4);
     },
   },
   methods: {

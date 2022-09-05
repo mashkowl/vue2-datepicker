@@ -7,10 +7,6 @@ $today-color: mix(#fff, $primary-color, 10%) !default;
 
 $popup-z-index: 2001 !default;
 
-$input-border-color: #ccc !default;
-$input-color: #555 !default;
-$input-hover-border-color: #409aff !default;
-
 $disabled-color: #ccc !default;
 $disabled-background-color: #f3f3f3 !default;
 
@@ -18,9 +14,6 @@ $border-color: #e8e8e8 !default;
 
 $calendar-active-color: #fff !default;
 $calendar-active-background-color: $primary-color !default;
-
-$calendar-hover-color: $default-color !default;
-$calendar-hover-background-color: mix(#fff, $calendar-active-background-color, 95%) !default;
 
 $calendar-in-range-color: $default-color !default;
 $calendar-in-range-background-color: mix(#fff, $calendar-active-background-color, 85%) !default;
@@ -31,5 +24,29 @@ $time-active-background-color: transparent !default;
 $time-hover-color: $default-color !default;
 $time-hover-background-color: mix(#fff, $calendar-active-background-color, 95%) !default;
 
-$input-border-radius: 4px !default;
 $sidebar-margin-left: 100px !default;
+
+
+//custom-var
+
+$input-hover-border-color: #FFDA7A !default;
+$input-background-color: #2F2F2F !default;
+$input-border-color: #666666 !default;
+$input-border-radius: 8px !default;
+$input-color: #BDBDBD !default;
+
+$icon-calendar-color: #BDBDBD !default;
+
+$datepicker-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35) !default;
+$datepicker-background-color: #212121 !default;
+$datepicker-border-radius: 8px !default;
+$datepicker-color: #FFFFFF !default;
+$datepicker-hover: #FFDA7A !default;
+
+$calendar-hover-background-color: #FFDA7A !default;
+$calendar-hover-color: #212121 !default;
+$calendar-disable-background-color: #666666 !default;
+$calendar-not-current-month-color: #666666 !default;
+$calendar-today-color: #FFDA7A !default;
+$calendar-week-day-color: #BDBDBD !default;
+$background-range-color: rgba(255, 218, 122, 0.5) !default;

@@ -111,10 +111,11 @@ export default {
       }
       return 0;
     },
+
     getRangeClasses(cellDate, currentDates, classnames) {
       const classes = [].concat(this.getClasses(cellDate, currentDates, classnames));
 
-      if (/disabled|active/.test(classnames)) return classes;
+      if (/not-current-month/.test(classnames)) return classes;
 
       const inRange = (data, range, fn = v => v.getTime()) => {
         const value = fn(data);
@@ -122,17 +123,49 @@ export default {
         if (min > max) {
           [min, max] = [max, min];
         }
-        return value > min && value < max;
+        return value >= min + 1 && value <= max - 1;
       };
-      if (currentDates.length === 2 && inRange(cellDate, currentDates)) {
-        return classes.concat('in-range');
+
+      const firstDayRange = (data, range, fn = v => v.getTime()) => {
+        const value = fn(data);
+        let [min, max] = range.map(fn);
+        if (min > max) {
+          [min, max] = [max, min];
+        }
+        return value === min;
+      };
+
+      const lastDayRange = (data, range, fn = v => v.getTime()) => {
+        const value = fn(data);
+        let [min, max] = range.map(fn);
+        if (min > max) {
+          [min, max] = [max, min];
+        }
+        return value === max;
+      };
+
+      if (currentDates.length === 2) {
+        if (firstDayRange(cellDate, currentDates)) {
+          return classes.concat('in-range-first');
+        }
+        if (lastDayRange(cellDate, currentDates)) {
+          return classes.concat('in-range-last');
+        }
+        if (inRange(cellDate, currentDates)) {
+          return classes.concat('in-range');
+        }
       }
-      if (
-        currentDates.length === 1 &&
-        this.hoveredValue &&
-        inRange(cellDate, [currentDates[0], this.hoveredValue])
-      ) {
-        return classes.concat('hover-in-range');
+
+      if (currentDates.length === 1 && this.hoveredValue) {
+        if (firstDayRange(cellDate, [currentDates[0], this.hoveredValue])) {
+          return classes.concat('hover-in-range-first');
+        }
+        if (lastDayRange(cellDate, [currentDates[0], this.hoveredValue])) {
+          return classes.concat('hover-in-range-last');
+        }
+        if (inRange(cellDate, [currentDates[0], this.hoveredValue])) {
+          return classes.concat('hover-in-range');
+        }
       }
 
       return classes;

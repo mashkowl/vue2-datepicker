@@ -3,16 +3,16 @@
 @import './btn.scss';
 @import './scrollbar.scss';
 @import './animation.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .#{$namespace}-datepicker {
   position: relative;
   display: inline-block;
-  width: 210px;
   svg {
-    width: 1em;
-    height: 1em;
+    width: 20px;
+    height: 20px;
     vertical-align: -0.15em;
-    fill: currentColor;
+    fill: $icon-calendar-color;
     overflow: hidden;
   }
 }
@@ -27,6 +27,26 @@
 
 .#{$namespace}-input-wrapper {
   position: relative;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+
+  width: 100%;
+  height: 20px;
+  padding: 16px 14px;
+  padding-left: 10px;
+
+  background-color: $input-background-color;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+  &:hover,
+  &:focus {
+    border-color: $input-hover-border-color;
+  }
+
   .#{$namespace}-icon-clear {
     display: none;
   }
@@ -43,22 +63,20 @@
 .#{$namespace}-input {
   display: inline-block;
   box-sizing: border-box;
-  width: 100%;
-  height: 34px;
-  padding: 6px 30px;
-  padding-left: 10px;
   font-size: 14px;
   line-height: 1.4;
   color: $input-color;
-  background-color: #fff;
-  border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  height: fit-content;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: $input-background-color;
 
-  &:hover,
-  &:focus {
-    border-color: $input-hover-border-color;
+  &::placeholder {
+    color: $input-color;
   }
+
   &:disabled,
   &.disabled {
     color: $disabled-color;
@@ -88,24 +106,28 @@
 
 .#{$namespace}-icon-clear {
   cursor: pointer;
+
   &:hover {
     color: rgba(0, 0, 0, 0.8);
   }
 }
 
 .#{$namespace}-datepicker-main {
-  font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
-  color: $default-color;
-  background-color: #fff;
-  border: 1px solid $border-color;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  color: $datepicker-color;
+  background-color: $datepicker-background-color;
+  border-radius: $datepicker-border-radius;
+  margin-top: 8px;
 }
 
 .#{$namespace}-datepicker-popup {
   position: absolute;
-  margin-top: 1px;
+  margin-top: 8px;
   margin-bottom: 1px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   z-index: $popup-z-index;
+  box-shadow: $datepicker-shadow;
 }
 
 .#{$namespace}-datepicker-sidebar {
@@ -142,18 +164,20 @@
 .#{$namespace}-datepicker-header {
   padding: 6px 8px;
   border-bottom: 1px solid $border-color;
+  background: #FFDA7A;
 }
 
 .#{$namespace}-datepicker-footer {
   padding: 6px 8px;
   text-align: right;
   border-top: 1px solid $border-color;
+  background: #FFDA7A;
 }
 
 .#{$namespace}-calendar {
   box-sizing: border-box;
-  width: 248px;
-  padding: 6px 12px;
+  width: 348px;
+  padding: 20px;
   & + & {
     border-left: 1px solid $border-color;
   }
@@ -161,10 +185,19 @@
 
 .#{$namespace}-calendar-header {
   box-sizing: border-box;
-  height: 34px;
-  line-height: 34px;
+  margin-bottom: 20px;
+  height: fit-content;
   text-align: center;
   overflow: hidden;
+
+  button {
+    color: $datepicker-color;
+    font-weight: normal;
+
+    &:hover {
+      color: $datepicker-hover;
+    }
+  }
 }
 
 .#{$namespace}-btn-icon-left,
@@ -183,33 +216,77 @@
 .#{$namespace}-calendar-decade-separator {
   margin: 0 2px;
   &:after {
-    content: '~';
+    content: '-';
   }
 }
 
 .#{$namespace}-calendar-content {
   position: relative;
-  height: 224px;
+  height: fit-content;
   box-sizing: border-box;
+
   .cell {
     cursor: pointer;
+
     &:hover {
-      color: $calendar-hover-color;
-      background-color: $calendar-hover-background-color;
+      div {
+        color: $calendar-hover-color;
+        background-color: $calendar-hover-background-color;
+      }
     }
+
     &.active {
-      color: $calendar-active-color;
-      background-color: $calendar-active-background-color;
+      div {
+        color: $calendar-hover-color;
+        background-color: $calendar-hover-background-color;
+      }
     }
-    &.in-range,
+
+    &.in-range-first {
+      background: $background-range-color;
+      border-radius: 100% 0 0 100%;
+    }
+
+    &.in-range-last {
+      background: $background-range-color;
+      border-radius: 0 100% 100% 0;
+    }
+
+    &.in-range {
+      background: $background-range-color;
+    }
+
     &.hover-in-range {
-      color: $calendar-in-range-color;
-      background-color: $calendar-in-range-background-color;
+      background: $background-range-color;
     }
+
+    &.hover-in-range-first {
+      background: $background-range-color;
+      border-radius: 100% 0 0 100%;
+
+      div {
+        color: $calendar-hover-color;
+        background-color: $calendar-hover-background-color;
+      }
+    }
+
+    &.hover-in-range-last {
+      background: $background-range-color;
+      border-radius: 0 100% 100% 0;
+
+      div {
+        color: $calendar-hover-color;
+        background-color: $calendar-hover-background-color;
+      }
+    }
+
+
     &.disabled {
       cursor: not-allowed;
-      color: $disabled-color;
-      background-color: $disabled-background-color;
+      div {
+        color: $calendar-hover-color;
+        background-color: $calendar-disable-background-color;
+      }
     }
   }
 }
@@ -251,28 +328,76 @@
 
   th {
     padding: 0;
-    font-weight: 500;
     vertical-align: middle;
+    color: $calendar-week-day-color;
+    font-weight: normal;
   }
   td {
     padding: 0;
     vertical-align: middle;
+
+    div {
+      width: 36px;
+      height: 36px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+    }
   }
 }
 
 .#{$namespace}-table-date {
   td,
   th {
-    height: 32px;
+    height: 44px;
+    width: 44px;
     font-size: 12px;
   }
 
   .today {
-    color: $today-color;
+    position: relative;
+
+    :before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: $calendar-today-color;
+      position: absolute;
+      bottom: 7px;
+      border-radius: 100%;
+    }
   }
   .cell.not-current-month {
-    color: #ccc;
+    color: $calendar-not-current-month-color;
     background: none; // cover the in-range style
+  }
+}
+
+.#{$namespace}-table-month, .#{$namespace}-table-year {
+  td {
+    div {
+      width: 47px;
+      height: 20px;
+      padding: 12px 15px;
+    }
+  }
+
+  .cell {
+    &:hover {
+      div {
+        background: none;
+        color: $calendar-hover-background-color;
+      }
+    }
+
+    &.active {
+      div {
+        background: none;
+        color: $calendar-hover-background-color;
+      }
+    }
   }
 }
 
@@ -297,7 +422,7 @@
 }
 
 .#{$namespace}-time-content {
-  height: 224px;
+  height: fit-content;
   box-sizing: border-box;
   overflow: hidden;
 }

@@ -103,7 +103,7 @@ export default {
       for (let i = 0; i < 10; i++) {
         years.push(firstYear + i);
       }
-      return chunk(years, 2);
+      return chunk(years, 4);
     },
     handleIconDoubleLeftClick() {
       this.$emit(

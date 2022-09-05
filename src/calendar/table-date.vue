@@ -1,21 +1,21 @@
 <template>
   <div :class="`${prefixClass}-calendar ${prefixClass}-calendar-panel-date`">
     <div :class="`${prefixClass}-calendar-header`">
-      <icon-button
-        type="double-left"
-        :disabled="isDisabledArrows('last-year')"
-        @click="handleIconDoubleLeftClick"
-      ></icon-button>
+      <!-- <icon-button
+      type="double-left"
+      :disabled="isDisabledArrows('last-year')"
+      @click="handleIconDoubleLeftClick"
+            ></icon-button>-->
       <icon-button
         type="left"
         :disabled="isDisabledArrows('last-month')"
         @click="handleIconLeftClick"
       ></icon-button>
-      <icon-button
-        type="double-right"
-        :disabled="isDisabledArrows('next-year')"
-        @click="handleIconDoubleRightClick"
-      ></icon-button>
+      <!-- <icon-button
+      type="double-right"
+      :disabled="isDisabledArrows('next-year')"
+      @click="handleIconDoubleRightClick"
+            ></icon-button>-->
       <icon-button
         type="right"
         :disabled="isDisabledArrows('next-month')"
@@ -133,16 +133,16 @@ export default {
       return this.getLocale().formatLocale.firstDayOfWeek || 0;
     },
     yearMonth() {
-      const { yearFormat, monthBeforeYear, monthFormat = 'MMM' } = this.getLocale();
+      const { yearFormat } = this.getLocale();
       const yearLabel = {
         panel: 'year',
         label: this.formatDate(this.calendar, yearFormat),
       };
       const monthLabel = {
         panel: 'month',
-        label: this.formatDate(this.calendar, monthFormat),
+        label: this.formatDate(this.calendar, 'MMMM'),
       };
-      return monthBeforeYear ? [monthLabel, yearLabel] : [yearLabel, monthLabel];
+      return [yearLabel, monthLabel];
     },
     days() {
       const locale = this.getLocale();

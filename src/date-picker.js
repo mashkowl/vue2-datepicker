@@ -481,6 +481,9 @@ export default {
           onMousedown={this.openPopup}
           onTouchstart={this.openPopup}
         >
+          <i className={`${prefixClass}-icon-calendar`}>
+            {this.renderSlot('icon-calendar', calendarIcon)}
+          </i>
           {input}
           {this.showClearIcon ? (
             <i
@@ -491,9 +494,6 @@ export default {
               {this.renderSlot('icon-clear', <IconClose />)}
             </i>
           ) : null}
-          <i class={`${prefixClass}-icon-calendar`}>
-            {this.renderSlot('icon-calendar', calendarIcon)}
-          </i>
         </div>
       );
     },

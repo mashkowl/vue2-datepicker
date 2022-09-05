@@ -52,11 +52,13 @@ $border-color: #ebedf0;
   display: inline-block;
   width: 100%;
   font-size: 14px;
-  color: #314659;
+  color: white;
   border: 1px solid $border-color;
   border-radius: 4px;
   margin-bottom: 60px;
   margin-top: 20px;
+  background: #2f2f2f;
+
   &.active {
     border-color: #1284e7;
   }
@@ -64,11 +66,14 @@ $border-color: #ebedf0;
 
 .card-demo {
   padding: 30px 24px;
-  color: #213649;
+  color: white;
   border-top: 1px solid $border-color;
+
   .box {
     display: flex;
+    gap: 40px;
     flex-wrap: wrap;
+
     > section {
       flex: 1;
       display: flex;
@@ -96,17 +101,20 @@ $border-color: #ebedf0;
 .markdown-body {
   font-size: 15px;
   line-height: 1.7;
+  display: flex;
+
   p,
   ul,
   ol {
     margin: 10px 0;
   }
+
   ul,
   ol {
     padding-left: 30px;
   }
+
   code {
-    margin: 0 1px;
     padding: 0.2em 0.4em;
     margin: 0;
     font-size: 85%;
@@ -124,10 +132,12 @@ $border-color: #ebedf0;
   cursor: pointer;
   transition: 0.2s;
   user-select: none;
+
   &:hover {
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
 }
+
 .icon-expand {
   position: absolute;
   left: 50%;
