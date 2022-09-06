@@ -5045,7 +5045,7 @@
         return !this.disabled && (typeof this.open === 'boolean' ? this.open : this.defaultOpen);
       },
       innerRangeSeparator: function innerRangeSeparator() {
-        return this.rangeSeparator || (this.multiple ? ',' : ' ~ ');
+        return this.rangeSeparator || (this.multiple ? ',' : ' - ');
       },
       innerFormat: function innerFormat() {
         var map = {

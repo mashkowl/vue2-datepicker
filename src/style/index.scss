@@ -47,6 +47,11 @@
     border-color: $input-hover-border-color;
   }
 
+  .#{$namespace}-icon-calendar {
+    display: flex;
+    align-items: center;
+  }
+
   .#{$namespace}-icon-clear {
     display: none;
   }
@@ -66,6 +71,7 @@
   font-size: 16px;
   line-height: 140%;
   color: $input-color;
+  width: 80%;
   height: 24px;
   border: none;
   padding: 0;
@@ -119,7 +125,6 @@
   color: $datepicker-color;
   background-color: $datepicker-background-color;
   border-radius: $datepicker-border-radius;
-  margin-top: 8px;
 }
 
 .#{$namespace}-datepicker-popup {
@@ -176,7 +181,8 @@
 
 .#{$namespace}-calendar {
   box-sizing: border-box;
-  width: 348px;
+  width: fit-content;
+  max-width: 400px;
   padding: 20px;
   & + & {
     border-left: 1px solid $border-color;
