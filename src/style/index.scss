@@ -47,11 +47,6 @@
     border-color: $input-hover-border-color;
   }
 
-  .#{$namespace}-icon-calendar {
-    display: flex;
-    align-items: center;
-  }
-
   .#{$namespace}-icon-clear {
     display: none;
   }
@@ -101,13 +96,18 @@
 .#{$namespace}-icon-calendar,
 .#{$namespace}-icon-clear {
   position: absolute;
-  top: 50%;
+  top: 55%;
   right: 8px;
   transform: translateY(-50%);
   font-size: 16px;
   line-height: 1;
   color: rgba(0, 0, 0, 0.5);
   vertical-align: middle;
+}
+
+i {
+  display: flex;
+  align-items: center;
 }
 
 .#{$namespace}-icon-clear {
