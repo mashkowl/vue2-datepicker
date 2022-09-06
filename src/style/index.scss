@@ -230,6 +230,7 @@ i {
   position: relative;
   height: fit-content;
   box-sizing: border-box;
+  max-width: 308px;
 
   .cell {
     cursor: pointer;
