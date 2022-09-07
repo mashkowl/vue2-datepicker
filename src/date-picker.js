@@ -147,7 +147,7 @@ export default {
       return !this.disabled && (typeof this.open === 'boolean' ? this.open : this.defaultOpen);
     },
     innerRangeSeparator() {
-      return this.rangeSeparator || (this.multiple ? ',' : ' ~ ');
+      return this.rangeSeparator || (this.multiple ? ',' : ' - ');
     },
     innerFormat() {
       const map = {
