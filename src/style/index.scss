@@ -145,7 +145,7 @@ i {
 
 .#{$namespace}-datepicker-sidebar + .#{$namespace}-datepicker-content {
   margin-left: $sidebar-margin-left;
-  border-left: 1px solid $border-color;
+  border-left: 1px solid $calendar-inside-border-color;
 }
 
 .#{$namespace}-datepicker-body {
@@ -175,7 +175,7 @@ i {
 .#{$namespace}-datepicker-footer {
   padding: 6px 8px;
   text-align: right;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $calendar-inside-border-color;
 }
 
 .#{$namespace}-calendar {
@@ -184,7 +184,7 @@ i {
   max-width: 400px;
   padding: 20px;
   & + & {
-    border-left: 1px solid $border-color;
+    border-left: 1px solid $calendar-inside-border-color;
   }
 }
 
