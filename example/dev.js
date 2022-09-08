@@ -8,7 +8,7 @@ import '../src/locale/zh-cn';
 import App from './app';
 
 DatePicker.install(Vue);
-DatePicker.locale('en');
+DatePicker.locale('ru');
 
 new Vue({
   render: h =>
