@@ -13,7 +13,7 @@
   ],
   "version": "3.11.0",
   "scripts": {
-    "dev": "parcel ./example/index.html",
+    "dev": "parcel ./example/dev.html --open --port 2235",
     "build:index": "cross-env NODE_ENV=production rollup -c",
     "build:locale": "cross-env NODE_ENV=production rollup -c rollup.locale.config.js",
     "build:css": "sass --style=compressed --no-source-map src/style/index.scss index.css && postcss index.css --use autoprefixer -o index.css --no-map && cp -R src/style scss",

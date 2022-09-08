@@ -216,6 +216,10 @@ i {
 
 .#{$namespace}-calendar-header-label {
   font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
 }
 
 .#{$namespace}-calendar-decade-separator {
@@ -539,4 +543,11 @@ i {
     outline: none;
     color: #FFDA7A;
   }
+}
+
+.#{$namespace}-btn-current-year, .#{$namespace}-btn-current-month {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
 }

@@ -32,6 +32,9 @@
           @click="handlePanelChange(item.panel)"
         >
           {{ item.label }}
+          <svg width="10" height="12" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.75 8.75L13 19.25L3.25 8.75" stroke="#fff"/>
+</svg>
         </button>
       </span>
     </div>
