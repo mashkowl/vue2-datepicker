@@ -116,6 +116,14 @@ export default {
       type: String,
       default: 'OK',
     },
+    cancel: {
+      type: Boolean,
+      default: false,
+    },
+    cancelText: {
+      type: String,
+      default: 'Cancel',
+    },
     renderInputText: {
       type: Function,
     },
@@ -352,6 +360,10 @@ export default {
       const value = this.emitValue(this.currentValue);
       this.$emit('confirm', value);
     },
+    handleCancelDate() {
+      const value = this.emitValue(this.currentValue);
+      this.$emit('close', value);
+    },
     handleSelectShortcut(evt) {
       const index = evt.currentTarget.getAttribute('data-index');
       const item = this.shortcuts[parseInt(index, 10)];
@@ -558,6 +570,15 @@ export default {
             value: this.currentValue,
             emit: this.handleSelectDate,
           })}
+          {this.cancel ? (
+            <button
+              type="button"
+              class={`${prefixClass}-btn ${prefixClass}-datepicker-btn-cancel`}
+              onClick={this.handleCancelDate}
+            >
+              {this.cancelText}
+            </button>
+          ) : null}
           {this.confirm ? (
             <button
               type="button"
@@ -578,7 +599,7 @@ export default {
       <div class={`${prefixClass}-datepicker-content`}>
         {this.hasSlot('header') ? this.renderHeader() : null}
         {this.renderContent()}
-        {this.hasSlot('footer') || this.confirm ? this.renderFooter() : null}
+        {this.hasSlot('footer') || this.confirm || this.cancel ? this.renderFooter() : null}
       </div>
     );
     return (

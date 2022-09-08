@@ -258,11 +258,6 @@ i {
       border-radius: 0 100% 100% 0;
     }
 
-    &.in-range-first + .in-range-last {
-      background: $background-range-color;
-      border-radius: 100%;
-    }
-
     &.in-range {
       background: $background-range-color;
     }
@@ -504,5 +499,44 @@ i {
     cursor: not-allowed;
     color: $disabled-color;
     background-color: $disabled-background-color;
+  }
+}
+
+.#{$namespace}-datepicker-btn-confirm {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #212121;
+  background: #FFDA7A;
+  border-radius: 8px;
+  padding: 13px 24px;
+  border: none;
+  outline: none;
+  &:hover {
+    border: none;
+    outline: none;
+    color: #212121;
+  }
+}
+
+.#{$namespace}-datepicker-btn-cancel {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  background: none;
+  color: #FFDA7A;
+  border: 1px solid #FFDA7A;
+  border-radius: 8px;
+  padding: 13px 24px;
+  margin-right: 8px;
+
+  &:hover {
+    border: 1px solid #FFDA7A;;
+    outline: none;
+    color: #FFDA7A;
   }
 }
