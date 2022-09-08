@@ -3614,7 +3614,8 @@ var DatePicker = {
       // cache the innervalue, wait to confirm
       currentValue: null,
       userInput: null,
-      defaultOpen: false
+      defaultOpen: false,
+      oldValue: null
     };
   },
   computed: {
@@ -3867,8 +3868,9 @@ var DatePicker = {
       this.$emit('confirm', value);
     },
     handleCancelDate: function handleCancelDate() {
-      var value = this.emitValue(this.currentValue);
+      var value = this.emitValue(this.range ? [null, null] : null);
       this.$emit('close', value);
+      this.$emit('cancel');
     },
     handleSelectShortcut: function handleSelectShortcut(evt) {
       var index = evt.currentTarget.getAttribute('data-index');

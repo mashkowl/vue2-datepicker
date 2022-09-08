@@ -148,6 +148,7 @@ export default {
       currentValue: null,
       userInput: null,
       defaultOpen: false,
+      oldValue: null,
     };
   },
   computed: {
@@ -361,8 +362,9 @@ export default {
       this.$emit('confirm', value);
     },
     handleCancelDate() {
-      const value = this.emitValue(this.currentValue);
+      const value = this.emitValue(this.range ? [null, null] : null);
       this.$emit('close', value);
+      this.$emit('cancel')
     },
     handleSelectShortcut(evt) {
       const index = evt.currentTarget.getAttribute('data-index');
