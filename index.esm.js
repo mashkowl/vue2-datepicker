@@ -1284,7 +1284,20 @@ var __vue_render__$5 = function __vue_render__() {
           return _vm.handlePanelChange(item.panel);
         }
       }
-    }, [_vm._v("\n        " + _vm._s(item.label) + "\n      ")]);
+    }, [_vm._v("\n          " + _vm._s(item.label) + "\n          "), _c('svg', {
+      attrs: {
+        "width": "10",
+        "height": "12",
+        "viewBox": "0 0 26 28",
+        "fill": "none",
+        "xmlns": "http://www.w3.org/2000/svg"
+      }
+    }, [_c('path', {
+      attrs: {
+        "d": "M22.75 8.75L13 19.25L3.25 8.75",
+        "stroke": "#fff"
+      }
+    })])]);
   }), 0)], 1), _vm._v(" "), _c('div', {
     class: _vm.prefixClass + "-calendar-content"
   }, [_c('table', {
@@ -1308,7 +1321,7 @@ var __vue_render__$5 = function __vue_render__() {
       attrs: {
         "data-row-col": i + ",0"
       }
-    }, [_vm._v("\n            " + _vm._s(_vm.getWeekNumber(row[0])) + "\n          ")]) : _vm._e(), _vm._v(" "), _vm._l(row, function (cell, j) {
+    }, [_vm._v("\n              " + _vm._s(_vm.getWeekNumber(row[0])) + "\n            ")]) : _vm._e(), _vm._v(" "), _vm._l(row, function (cell, j) {
       return _c('td', {
         key: j,
         staticClass: "cell",

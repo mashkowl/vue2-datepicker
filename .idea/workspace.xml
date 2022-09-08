@@ -42,7 +42,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.deploy:build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -95,8 +95,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.deploy:build" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build:index" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy" />
