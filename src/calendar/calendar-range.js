@@ -161,6 +161,13 @@ export default {
       }
 
       if (currentDates.length === 1 && this.hoveredValue) {
+        if (
+          firstDayRange(cellDate, [currentDates[0], this.hoveredValue]) &&
+          lastDayRange(cellDate, [currentDates[0], this.hoveredValue])
+        ) {
+          return classes.concat('');
+        }
+
         if (firstDayRange(cellDate, [currentDates[0], this.hoveredValue])) {
           return classes.concat('hover-in-range-first');
         }
