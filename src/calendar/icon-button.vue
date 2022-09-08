@@ -10,7 +10,7 @@
     ]"
     v-on="$listeners"
   >
-    <i :class="`${prefixClass}-icon-${type}`"></i>
+    <i :class="`${prefixClass}-icon-${type}`"> </i>
   </button>
 </template>
 
