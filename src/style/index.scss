@@ -258,6 +258,11 @@ i {
       border-radius: 0 100% 100% 0;
     }
 
+    &.in-range-first + .in-range-last {
+      background: $background-range-color;
+      border-radius: 100%;
+    }
+
     &.in-range {
       background: $background-range-color;
     }

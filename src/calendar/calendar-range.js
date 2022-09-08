@@ -146,7 +146,7 @@ export default {
 
       if (currentDates.length === 2) {
         if (firstDayRange(cellDate, currentDates) && lastDayRange(cellDate, currentDates)) {
-          return classes;
+          return classes.concat('');
         }
 
         if (firstDayRange(cellDate, currentDates)) {
