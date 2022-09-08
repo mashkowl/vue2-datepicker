@@ -145,6 +145,10 @@ export default {
       };
 
       if (currentDates.length === 2) {
+        if (firstDayRange(cellDate, currentDates) && lastDayRange(cellDate, currentDates)) {
+          return classes;
+        }
+
         if (firstDayRange(cellDate, currentDates)) {
           return classes.concat('in-range-first');
         }
