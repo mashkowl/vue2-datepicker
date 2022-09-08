@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18022eb5-9ca1-4418-a703-d0679a5f80a9" name="Changes" comment="fix: test fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="18022eb5-9ca1-4418-a703-d0679a5f80a9" name="Changes" comment="fix: test fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +37,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.release">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -92,9 +90,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.release" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy:build" />
-        <item itemvalue="npm.release" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
       </list>
