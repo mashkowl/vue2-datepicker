@@ -20,7 +20,7 @@
     "build": "npm run test && npm run clean && npm run build:index && npm run build:css && npm run build:locale",
     "clean": "rimraf scss locale index.*",
     "lint": "eslint src/**/*.{js,vue}",
-    "deploy:build": "cross-env NODE_ENV=production parcel build ./example/index.html --public-url ./ --out-dir dist --no-source-maps --no-minify",
+    "deploy:build": "cross-env NODE_ENV=production parcel build ./example/index.html --public-url ./ --out-dir _site --no-source-maps --no-minify",
     "deploy": "bash build/gh-pages-deploy.sh",
     "format": "prettier --write src/**/*",
     "test": "npm run lint && jest",
