@@ -8,29 +8,11 @@ exports[`TableDate corrent render 1`] = `
     class="mx-calendar-header"
   >
     <button
-      class="mx-btn mx-btn-text mx-btn-icon-double-left"
-      type="button"
-    >
-      <i
-        class="mx-icon-double-left"
-      />
-    </button>
-     
-    <button
       class="mx-btn mx-btn-text mx-btn-icon-left"
       type="button"
     >
       <i
         class="mx-icon-left"
-      />
-    </button>
-     
-    <button
-      class="mx-btn mx-btn-text mx-btn-icon-double-right"
-      type="button"
-    >
-      <i
-        class="mx-icon-double-right"
       />
     </button>
      
@@ -47,19 +29,19 @@ exports[`TableDate corrent render 1`] = `
       class="mx-calendar-header-label"
     >
       <button
-        class="mx-btn mx-btn-text mx-btn-current-month"
-        type="button"
-      >
-        
-        Oct
-      
-      </button>
-      <button
         class="mx-btn mx-btn-text mx-btn-current-year"
         type="button"
       >
         
         2019
+      
+      </button>
+      <button
+        class="mx-btn mx-btn-text mx-btn-current-month"
+        type="button"
+      >
+        
+        October
       
       </button>
     </span>

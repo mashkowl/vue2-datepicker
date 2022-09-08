@@ -7,6 +7,11 @@ exports[`DatePicker prop: attrs of input 1`] = `
   <div
     class="mx-input-wrapper"
   >
+    <i
+      classname="mx-icon-calendar"
+    >
+      <anonymous-stub />
+    </i>
     <input
       autocomplete="off"
       class="test"
@@ -14,11 +19,6 @@ exports[`DatePicker prop: attrs of input 1`] = `
       placeholder="test placeholder"
       type="number"
     />
-    <i
-      class="mx-icon-calendar"
-    >
-      <anonymous-stub />
-    </i>
   </div>
   <popup-stub
     appendtobody="true"
@@ -43,6 +43,11 @@ exports[`DatePicker prop: clearable 1`] = `
   <div
     class="mx-input-wrapper"
   >
+    <i
+      classname="mx-icon-calendar"
+    >
+      <anonymous-stub />
+    </i>
     <input
       autocomplete="off"
       class="mx-input"
@@ -50,11 +55,6 @@ exports[`DatePicker prop: clearable 1`] = `
       placeholder=""
       type="text"
     />
-    <i
-      class="mx-icon-calendar"
-    >
-      <anonymous-stub />
-    </i>
   </div>
   <popup-stub
     appendtobody="true"
@@ -79,6 +79,11 @@ exports[`DatePicker prop: editable 1`] = `
   <div
     class="mx-input-wrapper"
   >
+    <i
+      classname="mx-icon-calendar"
+    >
+      <anonymous-stub />
+    </i>
     <input
       autocomplete="off"
       class="mx-input"
@@ -89,11 +94,6 @@ exports[`DatePicker prop: editable 1`] = `
     />
     <i
       class="mx-icon-clear"
-    >
-      <anonymous-stub />
-    </i>
-    <i
-      class="mx-icon-calendar"
     >
       <anonymous-stub />
     </i>

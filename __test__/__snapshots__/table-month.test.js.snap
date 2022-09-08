@@ -70,8 +70,6 @@ exports[`TableMonth correct render 1`] = `
             Mar
           </div>
         </td>
-      </tr>
-      <tr>
         <td
           class="cell"
           data-month="3"
@@ -80,6 +78,8 @@ exports[`TableMonth correct render 1`] = `
             Apr
           </div>
         </td>
+      </tr>
+      <tr>
         <td
           class="cell"
           data-month="4"
@@ -96,8 +96,6 @@ exports[`TableMonth correct render 1`] = `
             Jun
           </div>
         </td>
-      </tr>
-      <tr>
         <td
           class="cell"
           data-month="6"
@@ -114,6 +112,8 @@ exports[`TableMonth correct render 1`] = `
             Aug
           </div>
         </td>
+      </tr>
+      <tr>
         <td
           class="cell"
           data-month="8"
@@ -122,8 +122,6 @@ exports[`TableMonth correct render 1`] = `
             Sep
           </div>
         </td>
-      </tr>
-      <tr>
         <td
           class="cell active"
           data-month="9"
