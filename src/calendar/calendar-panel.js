@@ -11,6 +11,7 @@ import TableDate from './table-date';
 import TableMonth from './table-month';
 import TableYear from './table-year';
 
+
 export default {
   name: 'CalendarPanel',
   inject: {
