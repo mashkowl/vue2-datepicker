@@ -120,16 +120,8 @@
       "text-summary"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -x @commitlint/config-conventional -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "**/*.{js,vue}": [
-      "eslint --fix",
-      "prettier --write",
       "git add"
     ]
   },
