@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dc9bfef-6f19-4274-a293-81637386bad8" name="Changes" comment="feat: change package json script">
-      <change beforePath="$PROJECT_DIR$/example/dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="18022eb5-9ca1-4418-a703-d0679a5f80a9" name="Changes" comment="fix: test fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +39,22 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.lint">
-    <configuration name="build:index" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build:index" />
+        <script value="build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="deploy:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="dev" />
+        <script value="deploy:build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -81,11 +80,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="version" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="version" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -93,11 +92,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.build:index" />
-        <item itemvalue="npm.version" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.deploy:build" />
         <item itemvalue="npm.release" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662642105019</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: test fix">
+      <created>1662645434729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662645434729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +180,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="feat: change build script" />
     <MESSAGE value="feat: change package json script" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: change package json script" />
+    <MESSAGE value="fix: test fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: test fix" />
   </component>
 </project>
